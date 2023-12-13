@@ -4,37 +4,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script> -->
-  <script type="text/javascript" src="canvasjs.min.js"></script>
-  <script src="script.js"></script>
   <link rel="stylesheet" href="style.css">
   <title>Minor</title>
 </head>
 
 <body>
-  <div id="chartContainer" style="width:100%; height:600px"></div>
+  <div class="con">
+  </div>
+  <div id="chartContainer"></div>
   <div class="controller">
 
-    <button id="addDataPoint">Add rendom Point</button>
-    
-    <div>
-      <label for="graph">Choose a Graph Type:</label>
-      <select name="graph" id="graph">
-        <option value="column">column</option>
-        <option value="bar">bar</option>
-        <option value="line">line</option>
-        <option value="area">area</option>
-        <option value="pie">pie</option>
-        <option value="spline">spline</option>
-      </select>
+    <div class="dbtn">
+      <button id="addDataPoint">Add random point</button>
+      <button id="downloadChart">Download Chart</button>
+      <div>
+        <label for="sl">Show label</label>
+        <input type="checkbox" name="sl" id="showlable" checked>
+      </div>
     </div>
 
-    <div>
-      <textarea id="inputtext" name="values">71,78,55,50,65</textarea>
-      <button id="inputupdater">update</button>
+    <div class="dbtn selbtn">
+      <div>
+        <label for="graph">Graph Type:</label>
+        <select name="graph" id="graph" autocomplete="off">
+          <option value="column" selected>column</option>
+          <option value="bar">bar</option>
+          <option value="line">line</option>
+          <option value="area">area</option>
+          <option value="pie">pie</option>
+          <option value="spline">spline</option>
+          <option value="doughnut">doughnut</option>
+        </select>
+      </div>
+      <div>
+        <label for="themecol">Theme Color:</label>
+        <select name="themecol" id="themecol" autocomplete="off">
+          <option value="light1" selected>light 1</option>
+          <option value="light2">light 2</option>
+          <option value="dark1">dark 1</option>
+          <option value="dark2">dark 2</option>
+        </select>
+      </div>
+      <div>
+        <label for="colors">Color Set:</label>
+        <select name="colors" id="colors" autocomplete="off">
+          <option value="colorSet1" selected>color Set 1</option>
+          <option value="colorSet2">color Set 2</option>
+          <option value="colorSet3">color Set 3</option>
+        </select>
+      </div>
     </div>
 
+    <div class="dbtn tbtn">
+      <div class="dbtn inner-tbtn">
+        <button id="addRowBtn">Add New Row</button>
+        <button id="Updatedata">update Data</button>
+      </div>
+      <table id="editableTable">
+        <thead>
+          <tr>
+            <th>Label</th>
+            <th contenteditable="true" id="xlabel">X</th>
+            <th contenteditable="true" id="ylabel">Y</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td contenteditable="true">Value0</td>
+            <td contenteditable="true">0</td>
+            <td contenteditable="true">17</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
+
+  <script type="text/javascript" src="canvasjs.min.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
