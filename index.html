@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script> -->
+  <script type="text/javascript" src="canvasjs.min.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Minor</title>
+</head>
+
+<body>
+  <div id="chartContainer" style="width:100%; height:600px"></div>
+  <div class="controller">
+
+    <button id="addDataPoint">Add rendom Point</button>
+    
+    <div>
+      <label for="graph">Choose a Graph Type:</label>
+      <select name="graph" id="graph">
+        <option value="column">column</option>
+        <option value="bar">bar</option>
+        <option value="line">line</option>
+        <option value="area">area</option>
+        <option value="pie">pie</option>
+        <option value="spline">spline</option>
+      </select>
+    </div>
+
+    <div>
+      <textarea id="inputtext" name="values">71,78,55,50,65</textarea>
+      <button id="inputupdater">update</button>
+    </div>
+
+  </div>
+</body>
+
+</html>
