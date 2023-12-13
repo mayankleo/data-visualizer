@@ -13,6 +13,8 @@ select {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
 table {
